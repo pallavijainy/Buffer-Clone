@@ -11,7 +11,7 @@ export const DownLogos = () => {
   </Heading>
     </Box>
         <Box display={"flex"} justifyContent={"center"} marginTop={"25px"}>
-    <Box display={"flex"} justifyContent={"space-around"} width={"600px"} >
+    <Box display={{sm:"grid",md:"grid",lg:"flex"}} justifyContent={"space-around"} width={"600px"} gap={10}>
         <Image boxSize={"60px"} width={"150px"} src='https://buffer.com/static/ui/meta-business-partner@2x-2.png'></Image>
         <Image boxSize={"60px"} width={"150px"} src='https://buffer.com/static/ui/pinterest-marketing-partner@2x-2.png'></Image>
         <Image boxSize={"60px"} width={"150px"} src='https://buffer.com/static/ui/linkedin-marketing-partner@2x-2.png'></Image>

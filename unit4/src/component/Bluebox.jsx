@@ -13,7 +13,7 @@ export const Bluebox = () => {
         justifyContent={"space-around"}
         
       >
-        <Box>
+        <Box display={{lg:"grid",md:"none",sm:"none",base:"none"}}>
           <Image
             boxSize={10}
             ml={"40"}
@@ -45,7 +45,7 @@ Get started now
 </Box>
 
 
-<Box>
+<Box display={{lg:"grid",md:"none",sm:"none",base:"none"}}>
 <Image
             boxSize={10}
             mr={"40"}

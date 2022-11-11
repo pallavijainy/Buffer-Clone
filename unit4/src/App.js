@@ -1,36 +1,28 @@
 
 import './App.css';
-import { Andbox } from './component/Andbox';
-import { Bluebox } from './component/Bluebox';
+// import { Home } from './Pages/Home';
+// import { Andbox } from './component/Andbox';
+// import { Bluebox } from './component/Bluebox';
 // import WithSubnavigation from './component/Demo';
-import { DownLogos } from './component/DownLogos';
-import { Footer } from './component/Footer';
-import { Fourth } from './component/Fourth';
-import { Frontone } from './component/Frontone';
-import { MiddleOne } from './component/MiddleOne';
-import { MidTwo } from './component/MidTwo';
-import { Navbar } from './component/Navbar';
-import { Sliding } from './component/Sliding';
-import { Year } from './component/Year';
+// import { DownLogos } from './component/DownLogos';
+// import { Footer } from './component/Footer';
+// import { Fourth } from './component/Fourth';
+// import { Frontone } from './component/Frontone';
+// import { MiddleOne } from './component/MiddleOne';
+// import { MidTwo } from './component/MidTwo';
+// import { Sliding } from './component/Sliding';
+// import { Year } from './component/Year';
+// import { Home } from './Pages/Home';
 import { RouterPage } from './Pages/RouterPage';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <MiddleOne/>
-      <MidTwo/>
-      <Frontone/>
-      <Fourth/>
-     <RouterPage/>
+     {/* <Home/> */}
+    
+    <RouterPage/>
+    
 
-<Sliding/>
-<Year/>
-<Andbox/>
-<DownLogos/>
-<Bluebox/>
-<Footer/>
-{/* <WithSubnavigation/> */}
     </div>
   );
 }
