@@ -29,7 +29,7 @@ const obj=[
 
   return (
 
-<Grid gridTemplateColumns={"repeat(4,1fr)"} marginTop={20}>
+<Grid gridTemplateColumns={{sm:"repeat(1,1fr)",md:"repeat(1,1fr)",lg:"repeat(4,1fr)"}} marginTop={20}>
 {
     obj.map((el)=>(
 <Box>

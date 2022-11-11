@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, grid, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -10,7 +10,7 @@ import FiberNewIcon from '@mui/icons-material/FiberNew';
 
 export const Footer = () => {
   return (
-    <Box display={"flex"} justifyContent={"space-around"} margin={"auto"} backgroundColor={"white"} height={"500px"} p={10} mt={20}>
+    <Box display={{base:"grid",sm:"grid",md:"grid",lg:"flex"}} justifyContent={{sm:"center",md:"center",lg:"space-around"}} margin={"auto"} backgroundColor={"white"} height={"500px"} p={10} mt={20}>
 <Box >
 <Grid>
     <Box>
@@ -19,7 +19,7 @@ export const Footer = () => {
   </Heading>
 
     </Box>
-<Box  display={"flex"} gap={4} mt={40} >
+<Box  display={"flex"} justifyContent={{sm:"center",md:"center",lg:"left"}} gap={4} mt={{sm:10,md:10,lg:40}} >
     <InstagramIcon/>
     <FacebookIcon/>
 <TwitterIcon/>
@@ -46,14 +46,16 @@ export const Footer = () => {
 <Heading as='h5' size='sm'>
 Download
   </Heading>
-
-  <Button leftIcon={<AppleIcon/>} colorScheme="blue" variant='outline' borderRadius={"25PX"} marginRight={3} mt={2}>
+<Box display={{lg:"flex" ,md:"grid" ,sm:"grid",base:"grid"}} gap={5}>
+<Button leftIcon={<AppleIcon/>} colorScheme="blue" variant='outline' borderRadius={"25PX"} marginRight={3} mt={2}>
     App Store
   </Button>
 
-  <Button leftIcon={<ShopIcon/>} colorScheme="blue" variant='outline'  borderRadius={"25PX"}>
+  <Button leftIcon={<ShopIcon/>} colorScheme="blue" variant='outline'  borderRadius={"25PX"} mt={2}>
     Google Play
   </Button>
+</Box>
+ 
 
   <Text mt={5} fontSize={"15px"}>Copyright ©2022 Buffer|Privacy|Terms|Security</Text>
 
@@ -68,9 +70,9 @@ Download
 
 {/* -----------------************************--------------------------------- */}
 
-<Box textAlign={"left"}>
+<Box textAlign={{sm:"center",md:"center",lg:"left"}} mt={5}>
 
-  <Stack>
+  <Stack spacing={4}>
   <Heading as='h3' size='lg'>
 Tools
   </Heading>
@@ -85,8 +87,8 @@ Start Page</Text>
   
 </Box>
 
-<Box textAlign={"left"}>
-    <Stack>
+<Box textAlign={{sm:"center",md:"center",lg:"left"}} mt={5}>
+    <Stack spacing={4}>
 
     <Heading as='h3' size='lg'>
 Resources
@@ -99,8 +101,8 @@ Resources
 
 </Box>
 
-<Box textAlign={"left"}>
-    <Stack>
+<Box textAlign={{sm:"center",md:"center",lg:"left"}} mt={5}>
+    <Stack spacing={4}>
     <Heading as='h3' size='lg'>
 Support
   </Heading>
@@ -113,8 +115,8 @@ Support
 
 </Box>
 
-<Box textAlign={"left"}>
-    <Stack>
+<Box textAlign={{sm:"center",md:"center",lg:"left"}} mt={5}>
+    <Stack spacing={4}>
     <Heading as='h3' size='lg'>
 Company
   </Heading>

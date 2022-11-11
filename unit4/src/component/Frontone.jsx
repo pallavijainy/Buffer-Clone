@@ -4,9 +4,9 @@ import React from 'react'
 export const Frontone = () => {
   return (
     <>
-    <Box display={"flex"} justifyContent={"center"} p={5} mt={"120px"} >
+    <Box display={{sm:"grid",md:"grid",lg:"flex"}} justifyContent={"center"} p={5} mt={"120px"} >
         <Box>
-        <Box maxW='32rem' textAlign={"left"} mt={"100px"}>
+        <Box maxW='32rem' textAlign={{sm:"center",md:"center",lg:"left"}} mt={"100px"}>
   <Heading size='md'  mb={4} color="blue">1. SHARE CLICK-WORTHY CONTENT</Heading>
   <Heading mb={4}>Get the clicks you deserve</Heading>
   <Text fontSize='2xl'>
@@ -48,9 +48,9 @@ Get started now
 
 {/* ---------------------***************************--------------------- */}
 
-<Box display={"flex"} justifyContent={"center"} p={5} mt={"120px"} >
+<Box display={{sm:"grid",md:"grid",lg:"flex"}} justifyContent={"center"} p={5} mt={"120px"} >
         <Box>
-        <Box maxW='32rem' textAlign={"left"} mt={"100px"}>
+        <Box maxW='32rem' textAlign={{sm:"center",md:"center",lg:"left"}} mt={"100px"}>
   <Heading size='md'  mb={4} color="blue">3. SAVE TONS OF TIME</Heading>
   <Heading mb={4}>Halve your workload</Heading>
   <Text fontSize='2xl'>
