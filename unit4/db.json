@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "email": "eve.holt@reqres.in",
+      "password": "cityslicka",
+      "id": 2
+    },
+    {
+      "email": "pallavi",
+      "password": "pal",
+      "id": 3
+    },
+    {
+      "email": "akash",
+      "password": "akash",
+      "id": 4
+    },
+    {
+      "email": "eve.holt@reqres.in",
+      "password": "cityslicka",
+      "id": 5
+    },
+    {
+      "email": "vini",
+      "password": "vini",
+      "id": 6
+    },
+    {
+      "email": "pal",
+      "password": "pal",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
