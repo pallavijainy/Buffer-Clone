@@ -11,7 +11,7 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
+  
   useDisclosure,
   Heading,
   Image,
@@ -84,6 +84,9 @@ export function Navbar() {
          <Box fontSize={20} color="blue" >
 <Link to={"/login"} >Login</Link>
 </Box>
+<Box fontSize={20} color="blue" >
+<Link to={"/adminlogin"} >Admin</Link>
+</Box>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={20}
@@ -133,7 +136,7 @@ const DesktopNav = () => {
                 {navItem.label} {navItem.pal}
               </Link> */}
 
-<NavLink style={{fontSize:"25px" , marginLeft:"20px" }} to={navItem.href}>{navItem.label} {navItem.pal}</NavLink>
+<NavLink style={{fontSize:"20px" , marginLeft:"20px" }} to={navItem.href}>{navItem.label} {navItem.pal}</NavLink>
 
 
             </PopoverTrigger>
@@ -277,7 +280,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Publishing',
         subLabel: 'Plan, collaborate, and publish thumb-stopping content',
-        href: '#',
+        href: '/publishing',
         img:  <CallMadeIcon />
       },
       {

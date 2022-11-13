@@ -1,7 +1,12 @@
 import { Box, Button, Heading, Image, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContext'
 
 export const Andbox = () => {
+
+  const {loginUser,authState}=useContext(AuthContext)
+
   return (
     <>
     <Box display={"flex"} justifyContent={"center"} p={5} mt={"140px"} gap={20}>
@@ -17,9 +22,23 @@ export const Andbox = () => {
 <Text fontSize='2xl' mt={10}>
 Our customer advocates are standing by 24/7 to support you via email and social media. We also have a comprehensive, regularly updated help center for those who prefer to find help themselves.
 </Text>
-<Button size='lg' mt='10' colorScheme='messenger' variant='outline'>
+{authState.isAuth ? (
+                <Link to={"/create"}>
+                  {" "}
+                  <Button size='lg' mt='10' colorScheme='messenger' variant='outline'>
 Visit our help center
 </Button>
+                </Link>
+              ) : (
+                <Link to={"/login"}>
+                <Button size='lg' mt='10' colorScheme='messenger' variant='outline'>
+Visit our help center
+</Button>
+                </Link>
+              )}
+
+
+
 </Box>
 </Box>
 </Box>

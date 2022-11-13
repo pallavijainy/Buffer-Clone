@@ -15,10 +15,11 @@ import {
   useDisclosure,
   useColorModeValue,
   Heading,
-  Divider,
+  
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import Logo from "../component/Image/PostAdda.png";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import PersonIcon from "@mui/icons-material/Person";
@@ -29,17 +30,11 @@ import Settings from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { Calender } from "../Calender/Calender";
-import CampaignIcon from '@mui/icons-material/Campaign';
-import Channels from "./Channels";
 
 
-// 
 const Links = ["Publishing", "Analytics", "Engagement", "Start Page"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
-
-
   <Link
     px={2}
     py={1}
@@ -54,10 +49,12 @@ const NavLink = ({ children }: { children: ReactNode }) => (
   </Link>
 );
 
-export default function Publish() {
+export default function Channels() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   var user=JSON.parse(localStorage.getItem("userName"))
   let name=user.email
+
+
   return (
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
@@ -189,36 +186,28 @@ Verify your email: An email has been sent to your inbox to verify your email add
       </Box>
 
 
-<Box display={"flex"}>
-  <Box textAlign={"left"} width={"20%"}  border={"1px solid black"} p={{sm:2,md:10,lg:20}}>
-    <Stack>
-    <Heading size={"md"}><CalendarTodayIcon/>Calendar</Heading>
-    <Heading size={"md"}><CampaignIcon/>Campaigns</Heading>
-    <Divider orientation='horizontal' variant={"solid"} />
-    <Heading size={"md"}><KeyboardArrowDownIcon/>Queues</Heading>
-    </Stack>
+<Heading>Already LogedIn Channels</Heading>
 
-    <Button colorScheme='black' variant='outline' mt={"100px"}>
-    <Link to={"/channel"}>User Channels</Link>
-  </Button>
-
-    <Button colorScheme='black' variant='outline' mt={"100px"}>
-    Add Channels
-  </Button>
-  
-
-
-  </Box>
-
- 
-<Box width={"100%"}>
- 
-
-  <Calender/>
-
+<Box border={"1px solid grey"}  boxShadow='dark-lg' p='6' rounded='md' bg='white'>
+<InstagramIcon />
+<Box p={2} gap={2}>
+                   <Heading as="h5" size="md">
+                   <Link to={"/instagram"}>Instagram</Link>
+               
+                 </Heading>
+              </Box>
 </Box>
-
+           
+            
+<Box border={"1px solid grey"}  boxShadow='dark-lg' p='6' rounded='md' bg='white'>
+<FacebookIcon />
+<Box p={2} gap={2} >
+                   <Heading as="h5" size="md">
+                   <Link to={"/facebook"}>Facebook</Link>
+                 </Heading>
+              </Box>
 </Box>
+          
 
 
 

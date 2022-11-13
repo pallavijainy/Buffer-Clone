@@ -1,7 +1,11 @@
 import { Box, Button, Heading, Image } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContext'
+
 
 export const Bluebox = () => {
+  const {loginUser,authState}=useContext(AuthContext)
   return (
     <Box >
       <Box
@@ -38,9 +42,25 @@ export const Bluebox = () => {
 140,000+ people like you use Buffer to build their brand on social media every month
   </Heading>
 
-  <Button size='lg' mt='10' colorScheme='orange' p={10}>
+  {authState.isAuth ? (
+                <Link to={"/create"}>
+                  {" "}
+                  <Button size='lg' mt='10' colorScheme='orange' p={10}>
 Get started now
 </Button>
+                </Link>
+              ) : (
+                <Link to={"/login"}>
+                  <Button size='lg' mt='10' colorScheme='orange' p={10}>
+Get started now
+</Button>
+                </Link>
+              )}
+
+
+
+
+  
 
 </Box>
 

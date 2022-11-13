@@ -1,4 +1,4 @@
-//
+
 import React, { useState } from "react";
 import {
   Box,
@@ -18,12 +18,10 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
-
-export const Login = () => {
+export const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [status, setStatus] = React.useState(false);
-  
   
 
   const getData = {
@@ -61,7 +59,7 @@ export const Login = () => {
       }
       if(status===true)
          {
-          return <Navigate to="/publish"/>
+          return <Navigate to="/adminpage"/>
          }
   
 
@@ -83,7 +81,7 @@ export const Login = () => {
           <FormControl margin={"auto"} width={{sm:"100%",md:"100%",lg:"70%"}}>
             <Stack>
               <Heading textAlign={"left"} size={"2xl"}>
-                Log in
+               Admin Log in
               </Heading>
               <FormLabel>Email Address</FormLabel>
               <Input

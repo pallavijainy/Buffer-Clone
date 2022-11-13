@@ -5,19 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
 import {BrowserRouter} from "react-router-dom"
+import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';
+import AuthContextProvider from './Context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
+  <StyledEngineProvider injectFirst>
+  <CssVarsProvider>
   <BrowserRouter>
+  <AuthContextProvider>
   <ChakraProvider>
+ 
  <React.StrictMode>
     <App />
   </React.StrictMode>
+ 
   </ChakraProvider>
-  
+  </AuthContextProvider>
   </BrowserRouter>
-  
+  </CssVarsProvider>
+  </StyledEngineProvider>
+
 
 
  

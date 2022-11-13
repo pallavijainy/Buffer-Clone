@@ -1,7 +1,14 @@
 import { Box, Button, Heading, Image, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContext'
+
 
 export const Frontone = () => {
+
+
+  const {loginUser,authState}=useContext(AuthContext)
+
   return (
     <>
     <Box display={{sm:"grid",md:"grid",lg:"flex"}} justifyContent={"center"} p={5} mt={"120px"} >
@@ -12,9 +19,13 @@ export const Frontone = () => {
   <Text fontSize='2xl'>
   Buffer will tell you when and what to publish to make your content stand out.
   </Text>
-  <Button size='lg' colorScheme='messenger' mt='24px'>
+
+  {authState.isAuth?(<Link to={"/create"}><Button size='lg' colorScheme='messenger' mt='24px'>
     Get started now
-  </Button>
+  </Button></Link>):<Link to={"/login"}><Button size='lg' colorScheme='messenger' mt='24px'>
+    Get started now
+  </Button></Link>}
+  
 </Box>
         </Box>
         <Box>
@@ -39,9 +50,11 @@ export const Frontone = () => {
 <Text fontSize='2xl' mt={10}>
 Buffer will share your content on the right channels, with suggested hashtags to help you grow.
 </Text>
-<Button size='lg' colorScheme='messenger' mt='10' >
-Get started now
-</Button>
+{authState.isAuth?(<Link to={"/create"}><Button size='lg' colorScheme='messenger' mt='24px'>
+    Get started now
+  </Button></Link>):<Link to={"/login"}><Button size='lg' colorScheme='messenger' mt='24px'>
+    Get started now
+  </Button></Link>}
 </Box>
 </Box>
 </Box>
@@ -56,9 +69,11 @@ Get started now
   <Text fontSize='2xl'>
   Buffer will publish everything for you to save time and it’ll showcase your work with automated reports.
   </Text>
-  <Button size='lg' colorScheme='messenger' mt='24px'>
+  {authState.isAuth?(<Link to={"/create"}><Button size='lg' colorScheme='messenger' mt='24px'>
     Get started now
-  </Button>
+  </Button></Link>):<Link to={"/login"}><Button size='lg' colorScheme='messenger' mt='24px'>
+    Get started now
+  </Button></Link>}
 </Box>
         </Box>
         <Box maxW='32rem'>
