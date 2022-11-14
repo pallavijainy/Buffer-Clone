@@ -8,15 +8,15 @@ import Slider from "react-slick";
 
 // Settings for the slider
 const settings = {
-  dots: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
+  dots:false,
   infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
   autoplay: true,
-  speed: 100,
-  autoplaySpeed: 1000,
+  speed: 2000,
+  autoplaySpeed: 2000,
+  cssEase: "linear"
 };
-
 export function Sliding() {
   // As we have used custom buttons, we need a reference variable to
   // change the state
@@ -131,6 +131,7 @@ export function Sliding() {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
+            
             // backgroundImage={`url(${url})`}
           >
 
@@ -160,18 +161,18 @@ export function Sliding() {
                     marginLeft: "15%",
                   }}
                 >
-                  <Text fontSize="20px" mt={10}>
+                  <Text fontSize={{base:"none",sm:"0px",md:"0px",lg:"20px"}} mt={10}>
                     {url.par}
                   </Text>
                 </div>
 
                 <div>
-                  <Text fontSize="4xl" as="abbr" mt={10} color="RGBA(0, 0, 0, 0.24)" >
+                  <Text fontSize={{base:"0px",sm:"0px",md:"0px",lg:"4xl"}} as="abbr" mt={10} color="RGBA(0, 0, 0, 0.24)" >
                     {url.offer}
                   </Text>
                 </div>
                 <div>
-                <Heading as="h5" size="sm">
+                <Heading as="h5" size="sm" display={{base:"none",sm:"none",md:"none"}}>
                   {url.name}
                 </Heading>
 
