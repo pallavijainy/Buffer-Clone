@@ -24,7 +24,7 @@ const getData={
       return axios({
           method:"POST",
             
-            url:`http://localhost:3000/posts`,
+            url:`https://buffer-deploy-link-pallavijainy.vercel.app/posts`,
           data:getData
       }).then((res)=>{
   console.log(res)

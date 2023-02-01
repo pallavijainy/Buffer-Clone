@@ -8,7 +8,7 @@ export const AdminGet = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/profile")
+      .get("https://buffer-deploy-link-pallavijainy.vercel.app/profile")
       .then((res) => {
         console.log(res.data);
         setShow(res.data);

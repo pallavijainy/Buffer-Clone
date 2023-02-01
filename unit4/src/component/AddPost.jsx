@@ -26,7 +26,7 @@ const AddPost = () => {
 
   const handleClick = () => {
     axios
-      .post(`http://localhost:3000/comments`, {
+      .post(`https://buffer-deploy-link-pallavijainy.vercel.app/comments`, {
         title: input,
         category: type,
         gender: gender,

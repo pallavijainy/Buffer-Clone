@@ -27,7 +27,7 @@ const AddChannel = () => {
 
   const handleClick = () => {
     axios
-      .post(`http://localhost:3000/profile`, {
+      .post(`https://buffer-deploy-link-pallavijainy.vercel.app/profile`, {
         title: input,
         category: type,
         gender: gender,

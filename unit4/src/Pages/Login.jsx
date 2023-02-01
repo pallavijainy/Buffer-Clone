@@ -34,7 +34,7 @@ export const Login = () => {
       return axios({
           method:"GET",
     
-          url:`http://localhost:3000/posts`,
+          url:`https://buffer-deploy-link-pallavijainy.vercel.app/posts`,
           data:getData
       }).then((res)=>{
         localStorage.setItem("userName",JSON.stringify(getData))

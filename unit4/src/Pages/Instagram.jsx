@@ -9,7 +9,7 @@ export const Instagram = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/comments")
+      .get("https://buffer-deploy-link-pallavijainy.vercel.app/comments")
       .then((res) => {
         console.log(res.data);
         setShow(res.data);
